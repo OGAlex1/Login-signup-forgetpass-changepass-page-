@@ -1,0 +1,661 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: white;
+}
+.nav {
+  width: 100%;
+  padding: 0.7rem;
+
+  background-color: 255, 255, 255, 0.05;
+  border-bottom: 1px rgba(255, 255, 255, 0.142) solid;
+  backdrop-filter: blur(15px);
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logo {
+  box-shadow: 0 0 10px #38bdf8;
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+}
+
+.nav .link {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  margin-right: 40px;
+}
+.nav .link a {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #e2e8f0;
+  transition: ease 0.3s;
+}
+
+.nav .link li a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 15px #38bdf8;
+}
+
+/* login input pass and user */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.loginfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  margin-top: 2.2rem;
+}
+
+.log input {
+  width: 270px;
+  height: 55px;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  padding-left: 20px;
+
+  background-color: transparent;
+  border: 2px rgba(255, 255, 255, 0.3) solid;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: 0.3s;
+  transition: transform 0.3s ease;
+}
+
+.log input:hover {
+  border: 2px #38bdf8 solid;
+  background-color: #032939;
+  outline: #38bdf8;
+  transform: scale(1.1);
+}
+
+/* Remember ME option */
+
+.staylogin {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.staylogin ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.staylogin li {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.staylogin li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #38bdf8;
+}
+
+.staylogin input[type="checkbox"] {
+  position: relative;
+  display: none;
+}
+
+input[type="checkbox"] + label::before {
+  content: "✔";
+  border: 1px solid #38bdf8;
+  border-radius: 0.3rem;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding-left: 0.35rem;
+  padding-bottom: 0.45rem;
+  margin-right: 0.3rem;
+
+  vertical-align: bottom;
+  color: transparent;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* input[type="checkbox"]::before {
+
+} */
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #38bdf8;
+  border: 1px solid #ffff;
+  color: #ffff;
+}
+
+/* 
+.staylogin:has(#checkbox:checked).checked {
+  opacity: 1;
+  background-color: #fff;
+} */
+
+/* login button */
+
+.btn {
+  margin-top: 20px;
+}
+
+.btn button {
+  width: 150px;
+  height: 43px;
+  margin-top: 20px;
+
+  border-radius: 20px;
+  background-color: #38bdf8;
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  box-shadow: #38bdf8 0 0 15;
+  border: 1px solid #fff;
+  transition: 0.3s ease;
+}
+
+.btn button:hover {
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+.btn button:active {
+  background-color: #00b3ff;
+  /* transform: rotate(360deg); */
+}
+
+/* google, fb ig etc sign in */
+
+.downsec {
+  display: flex;
+}
+
+.with {
+  margin-top: 200px;
+}
+
+.with ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 10px;
+}
+
+.with li {
+  list-style: none;
+}
+.with li img {
+  background-color: #fff;
+  aspect-ratio: 4/4;
+  width: 20px;
+}
+
+/* dont have an account */
+
+.donthave {
+  margin-top: 15px;
+}
+
+.donthave ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.donthave li {
+  list-style: none;
+}
+
+.donthave a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #38bdf8;
+}
+
+/* Medail Querries / Reponsive screen */
+
+/* for tablet  */
+
+@media (max-width: 900px) {
+  .content {
+    margin-top: 100px;
+  }
+  .nav {
+    height: 80px;
+  }
+  .nav .link {
+    gap: 30px;
+  }
+
+  .nav .link a {
+    font-size: 1.3rem;
+  }
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .log input {
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 1.4rem;
+  }
+  .staylogin {
+    margin-top: 40px;
+  }
+  .staylogin li {
+    font-size: 1.5rem;
+  }
+
+  .staylogin li a {
+    font-size: 1.5rem;
+  }
+
+  input[type="checkbox"] + label::before {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .btn {
+    margin-top: 35px;
+  }
+
+  .btn button {
+    width: 150px;
+    height: 43px;
+    font-size: 1.6rem;
+    border-radius: 20px;
+  }
+
+  .btn button:hover {
+    box-shadow: 0 0 25px #38bdf8;
+  }
+
+  .with {
+    margin-top: 430px;
+    display: inline-block;
+  }
+
+  .span h4 {
+    font-size: 2rem;
+  }
+  .with li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .with li img {
+    background-color: #fff;
+    aspect-ratio: 3/3;
+    width: 40px;
+  }
+
+  .donthave li {
+    font-size: 2rem;
+  }
+
+  .donthave li a {
+    font-size: 2rem;
+  }
+}
+
+/* from 500px down */
+
+@media (max-width: 500px) {
+  .content {
+    margin-top: 15px;
+  }
+  .nav {
+    height: 65px;
+  }
+  .nav .link {
+    gap: 15px;
+    margin-right: 15px;
+  }
+
+  .nav .link a {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    box-shadow: none;
+  }
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  .loginfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .log input {
+    width: 380px;
+    height: 55px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    border-color: #e2e8f0 2px solid;
+    cursor: pointer;
+  }
+
+  .loginfo::before {
+    content: "Log In";
+    display: block;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .staylogin {
+    margin-top: 20px;
+  }
+  .staylogin li {
+    font-size: 1rem;
+  }
+
+  .staylogin li a {
+    font-size: 1rem;
+  }
+
+  input[type="checkbox"] + label::before {
+    width: 0.8rem;
+    height: 0.9rem;
+    margin-bottom: 0.3rem;
+    padding-right: 0.4rem;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+
+  .btn button {
+    width: 380px;
+    height: 55px;
+    font-size: 1.4rem;
+    border-radius: 20px;
+  }
+
+  .btn button:hover {
+    box-shadow: 0 0 25px #38bdf8;
+  }
+
+  .with {
+    margin-top: 190px;
+    display: inline-block;
+  }
+
+  .span h4 {
+    font-size: 0.9rem;
+  }
+  .with li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .with li img {
+    background-color: #fff;
+    aspect-ratio: 3/3;
+    width: 17px;
+  }
+
+  .donthave li {
+    font-size: 0.9rem;
+  }
+
+  .donthave li a {
+    font-size: 0.9rem;
+  }
+}
+
+/* form 400px down */
+
+/* 
+@media (max-width: 400px) {
+  .content {
+    margin-top: 10px;
+  }
+  .nav {
+    height: 50px;
+  }
+  .nav .link {
+    gap: 10px;
+    margin-right: 20px;
+  }
+
+  .nav .link a {
+    font-size: 0.7rem;
+  }
+
+  .logo {
+    box-shadow: none;
+  }
+  .logo img {
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+  }
+
+  .loginfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .log input {
+    width: 290px;
+    height: 55px;
+    border-radius: 30px;
+    font-size: 1rem;
+    border-color: #e2e8f0 2px solid;
+    cursor: pointer;
+  }
+
+  .loginfo::before {
+    content: "Log In";
+    display: block;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .staylogin {
+    margin-top: 20px;
+  }
+  .staylogin li {
+    font-size: 1rem;
+  }
+
+  .staylogin li a {
+    font-size: 1rem;
+  }
+
+  input[type="checkbox"] + label::before {
+    width: 0.8rem;
+    height: 0.9rem;
+    margin-bottom: 0.3rem;
+    padding-right: 0.4rem;
+  }
+  input[type="checkbox"] {
+    /* display: flex;
+    margin-top: 70px;} 
+  
+
+  .btn {
+    margin-top: 35px;
+  }
+
+  .btn button {
+    width: 290px;
+    height: 55px;
+    font-size: 1.6rem;
+    border-radius: 20px;
+  }
+
+  .btn button:hover {
+    box-shadow: 0 0 25px #38bdf8;
+  }
+
+  .with {
+    margin-top: 135px;
+    display: inline-block;
+  }
+
+  .span h4 {
+    font-size: 1rem;
+  }
+  .with li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .with li img {
+    background-color: #fff;
+    aspect-ratio: 3/3;
+    width: 20px;
+  }
+
+  .donthave li {
+    font-size: 1rem;
+  }
+
+  .donthave li a {
+    font-size: 1rem;
+  }
+ */
+
+@media (max-width: 360px) {
+  .content {
+    margin-top: 10px;
+  }
+  .nav {
+    height: 50px;
+  }
+  .nav .link {
+    gap: 10px;
+    margin-right: 20px;
+  }
+
+  .nav .link a {
+    font-size: 0.7rem;
+  }
+
+  .logo {
+    box-shadow: none;
+  }
+  .logo img {
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+  }
+
+  .loginfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .log input {
+    width: 285px;
+    height: 55px;
+    border-radius: 30px;
+    font-size: 1rem;
+    border-color: #e2e8f0 2px solid;
+    cursor: pointer;
+  }
+
+  .loginfo::before {
+    content: "Log In";
+    display: block;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .staylogin {
+    margin-top: 20px;
+  }
+  .staylogin li {
+    font-size: 1rem;
+  }
+
+  .staylogin li a {
+    font-size: 1rem;
+  }
+
+  input[type="checkbox"] + label::before {
+    width: 0.8rem;
+    height: 0.9rem;
+    margin-bottom: 0.3rem;
+    padding-right: 0.4rem;
+  }
+
+  .btn {
+    margin-top: 35px;
+  }
+
+  .btn button {
+    width: 285px;
+    height: 55px;
+    font-size: 1.6rem;
+    border-radius: 20px;
+  }
+
+  .btn button:hover {
+    box-shadow: 0 0 25px #38bdf8;
+  }
+
+  .with {
+    margin-top: 135px;
+    display: inline-block;
+  }
+
+  .span h4 {
+    font-size: 1rem;
+  }
+  .with li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .with li img {
+    background-color: #fff;
+    aspect-ratio: 3/3;
+    width: 18px;
+  }
+
+  .donthave li {
+    font-size: 0.9rem;
+  }
+
+  .donthave li a {
+    font-size: 0.9rem;
+  }
+}

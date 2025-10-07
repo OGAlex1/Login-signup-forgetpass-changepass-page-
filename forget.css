@@ -1,0 +1,484 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* background-color: #0f172a; */
+  color: white;
+
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hearder1 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 85px;
+  border-bottom: 1px rgba(255, 255, 255, 0.142) solid;
+
+  background-color: #0f172af5;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.hearder1 img {
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: 20px;
+
+  filter: brightness(1) invert(1);
+}
+
+.hearder1 img:hover:active {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(100%) saturate(100%)
+    hue-rotate(90deg) brightness(100%) contrast(100%);
+}
+
+img {
+  width: 380px;
+}
+
+h3 {
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.enter input {
+  width: 350px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+
+  padding-left: 20px;
+  outline: none;
+  border: 2px solid #0f172a;
+  background-color: none;
+
+  transition: transform 0.3s ease;
+}
+
+.enter input:hover {
+  transform: scale(1.1);
+}
+
+.btn button {
+  width: 150px;
+  height: 43px;
+  margin-top: 10px;
+
+  border-radius: 30px;
+  background-color: #0f172a;
+  font-size: 1rem;
+  font-weight: 600;
+
+  box-shadow: #38bdf8 0 0 15;
+  border: 1px solid #fff;
+  transition: 0.3s ease;
+}
+
+.btn button:hover {
+  box-shadow: 0 0 15px #0c1325;
+  transform: scale(1.1);
+}
+
+.btn button:active {
+  background-color: #162241;
+}
+
+button {
+  color: #38f8bb;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* 
+Please Enter 4 Digit Code Sent To You Email styling  */
+
+.content4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hearder {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px rgba(255, 255, 255, 0.142) solid;
+
+  background-color: #0f172af5;
+}
+
+.hearder h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-size: 2rem;
+}
+
+.hearder a img {
+  width: 40px;
+
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  transform: translateY(-50%);
+  filter: brightness(1) invert(1);
+  margin-left: 20px;
+}
+
+.hearder a img:hover:active {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(100%) saturate(100%)
+    hue-rotate(90deg) brightness(100%) contrast(100%);
+}
+
+.content4 img {
+  width: 300px;
+  margin-top: 40px;
+}
+
+.content4 h3 {
+  color: #0f172a;
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+
+.otp {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.otp input {
+  width: 55px;
+  height: 50px;
+
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.otp input:hover {
+  transform: scale(1.1);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfiled;
+}
+
+button {
+  color: #38f8bb;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.btn1 button {
+  width: 150px;
+  height: 43px;
+  margin-top: 20px;
+
+  border-radius: 20px;
+  background-color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  box-shadow: #38bdf8 0 0 15;
+  border: 1px solid #fff;
+  transition: 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.btn1 button:hover {
+  box-shadow: 0 0 15px #0c1325;
+  transform: scale(1.1);
+}
+
+.btn button:active {
+  background-color: #121b32;
+}
+
+/* responsive screen for forget your password  */
+
+@media (max-width: 900px) {
+  .hearder1 h1 {
+    font-size: 1.6rem;
+  }
+
+  .image img {
+    width: 300px;
+    margin-top: 30px;
+  }
+  h3 {
+    font-size: 1rem;
+    margin-bottom: -10px;
+  }
+
+  .enter input {
+    width: 380px;
+    height: 55px;
+    font-size: 1.3rem;
+
+    border-radius: 40px;
+    margin-top: 20px;
+  }
+
+  .btn button {
+    width: 200px;
+    height: 55px;
+    border-radius: 40px;
+
+    margin-top: 20px;
+  }
+}
+
+/* small sceen bellow 500 sm */
+
+@media (max-width: 500px) {
+  .hearder1 h1 {
+    font-size: 1rem;
+  }
+
+  .hearder1 img {
+    width: 35px;
+  }
+
+  .image img {
+    width: 280px;
+    margin-top: 50px;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-bottom: -10px;
+  }
+  h3 span {
+    display: block;
+    text-align: center;
+  }
+
+  form {
+  }
+  .enter input {
+    width: 310px;
+    height: 60px;
+    font-size: 1.2rem;
+
+    border-radius: 40px;
+    margin-top: 20px;
+  }
+
+  .btn button {
+    width: 330px;
+    height: 60px;
+    border-radius: 40px;
+
+    margin-top: 20px;
+  }
+}
+
+/* small phone screen from 360 */
+
+@media (max-width: 360px) {
+  .hearder1 {
+    height: 55px;
+  }
+
+  .hearder1 h1 {
+    font-size: 0.8rem;
+  }
+
+  .hearder1 img {
+    width: 25px;
+  }
+
+  .image img {
+    width: 250px;
+    margin-top: 50px;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-bottom: -20px;
+  }
+
+  h3 span {
+    display: block;
+    text-align: center;
+  }
+
+  .enter input {
+    width: 280px;
+    height: 50px;
+    font-size: 1.2rem;
+
+    border-radius: 40px;
+    margin-top: 30px;
+  }
+
+  .btn button {
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+
+    margin-top: 20px;
+  }
+}
+
+/* entert otp reponsive tablet screen */
+
+@media (max-width: 900px) {
+  .hearder h4 {
+    font-size: 1.6rem;
+  }
+
+  .content4 img {
+    width: 300px;
+  }
+
+  .content4 h3 {
+    font-size: 1rem;
+  }
+  .otp {
+    gap: 10px;
+  }
+
+  .otp input {
+    width: 50px;
+    height: 45px;
+  }
+}
+
+/* small screen bellow 500px */
+
+@media (max-width: 500px) {
+  .hearder {
+    height: 70px;
+  }
+
+  .hearder h4 {
+    font-size: 1rem;
+  }
+
+  .hearder a img {
+    width: 35px;
+  }
+
+  .content4 img {
+    margin-top: 50px;
+    width: 260px;
+  }
+
+  .content4 h3 {
+    font-size: 0.9rem;
+  }
+  .otp {
+    gap: 15px;
+  }
+
+  .otp input {
+    width: 60px;
+    height: 55px;
+  }
+
+  .btn1 button {
+    width: 325px;
+    height: 50px;
+
+    font-size: 1.2;
+  }
+}
+
+/* reponsive  small screen bellow 360 */
+
+@media (max-width: 360px) {
+  .hearder {
+    height: 50px;
+  }
+
+  .hearder h4 {
+    font-size: 0.9rem;
+  }
+
+  .hearder a img {
+    width: 25px;
+  }
+
+  .content4 img {
+    margin-top: 50px;
+    width: 250px;
+  }
+
+  .content4 h3 {
+    font-size: 0.9rem;
+  }
+  .otp {
+    gap: 10px;
+  }
+
+  .otp input {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+
+    font-size: 1rem;
+  }
+
+  .btn1 button {
+    width: 290px;
+    height: 50px;
+
+    border-radius: 50px;
+  }
+}

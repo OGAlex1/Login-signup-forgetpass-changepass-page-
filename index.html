@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="istyles.css" />
+  </head>
+  <body>
+    <form action="">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo">
+            <img src="/image/alex.jpg" width="40px" height="40px" />
+          </div>
+          <ul class="link">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Portfilo</a></li>
+            <li><a href="#">More</a></li>
+          </ul>
+        </nav>
+
+        <div class="content">
+          <div class="loginfo">
+            <div class="log">
+              <input
+                type="text"
+                name="username"
+                id="usern"
+                required
+                placeholder="UserName"
+              />
+            </div>
+
+            <div class="log">
+              <input
+                type="text"
+                name="password"
+                id="pass"
+                placeholder="Password"
+                required
+                minlength="8"
+                maxlength="20"
+              />
+            </div>
+          </div>
+
+          <div class="staylogin">
+            <div class="checked"></div>
+
+            <ul>
+              <li>
+                <input type="checkbox" id="checkbox" required />
+                <label for="checkbox">Remember me</label>
+              </li>
+
+              <li><a href="#">Forget Password</a></li>
+            </ul>
+          </div>
+
+          <div class="btn">
+            <button>Login</button>
+          </div>
+
+          <div class="with">
+            <div class="span"><h4>Or Sign in with</h4></div>
+
+            <ul>
+              <li>
+                <a href="#"><img src="/image/FACEBOOK.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/image/INSTAGRAM.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/image/pinintrest.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/image/bhance.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="donthave">
+            <ul>
+              <li><a href="#"></a>Dont have an account ?</li>
+              <li><a href="Signup.html">Sign up</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

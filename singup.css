@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+h4 {
+  margin-right: 480px;
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.loginfo {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.log input {
+  width: 270px;
+  height: 55px;
+  border-radius: 25px;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: #fff;
+
+  background: none;
+  border: #38bdf8 2px solid;
+  outline: #38bdf8;
+  transition: ease 0.3s;
+}
+
+.log input:hover {
+  border: 2px #38bdf8 solid;
+  background-color: #032939;
+  outline: #38bdf8;
+  transform: scale(1.1);
+}
+
+/* email and pass word */
+
+.content2 {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.info input {
+  width: 270px;
+  height: 55px;
+  border-radius: 25px;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: #fff;
+
+  background: none;
+  border: #38bdf8 2px solid;
+  outline: #38bdf8;
+  transition: ease 0.3s;
+}
+
+.info input:hover {
+  border: 2px #38bdf8 solid;
+  background-color: #032939;
+  outline: #38bdf8;
+  transform: scale(1.1);
+}
+
+/* I Agree with privacy and policy */
+
+.check ul {
+  display: flex;
+  gap: 10px;
+}
+
+.check li {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.check li a {
+  text-decoration: none;
+  color: #38bdf8;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  display: none;
+}
+
+.mark {
+  position: absolute;
+  width: 10px;
+  display: none;
+  pointer-events: none;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+
+  border: 1px #38bdf8 solid;
+
+  width: 0.8rem;
+  height: 0.8rem;
+
+  margin-top: 6.5px;
+}
+
+input[type="checkbox"]:checked + :before {
+  background-color: #38bdf8;
+  border: 1px solid #ffff;
+  color: #ffff;
+}
+
+ul:has(input:checked) .mark {
+  display: block;
+}
+
+/* button login section */
+
+.btn button {
+  width: 150px;
+  height: 43px;
+  margin-top: 20px;
+
+  border-radius: 20px;
+  background-color: #38bdf8;
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  box-shadow: #38bdf8 0 0 15;
+  border: 1px solid #fff;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+/* already have an account  */
+
+.content3 {
+  margin-top: 180px;
+}
+
+.btn button:active {
+  background-color: #00b3ff;
+  /* transform: rotate(360deg); */
+}
+.content3 a {
+  text-decoration: none;
+
+  color: #38bdf8;
+}
+
+/* reponsive for small tablet and phone screen */
+
+@media (max-width: 500px) {
+  .container {
+    margin-top: 20px;
+  }
+
+  h4 {
+    margin-right: 235px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .loginfo {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .log input {
+    width: 165px;
+    height: 50px;
+  }
+
+  .content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info input {
+    width: 340px;
+    height: 50px;
+  }
+
+  .check li {
+    font-size: 0.8rem;
+  }
+
+  input[type="checkbox"] + label::before {
+    margin-top: 2px;
+  }
+
+  .btn button {
+    width: 340px;
+  }
+
+  .content3 {
+    margin-top: 240px;
+  }
+
+  .content3 p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin-top: 20px;
+  }
+
+  h4 {
+    margin-right: 235px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .loginfo {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .log input {
+    width: 155px;
+    height: 50px;
+  }
+
+  .content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info input {
+    width: 330px;
+    height: 50px;
+  }
+
+  .check li {
+    font-size: 0.8rem;
+  }
+
+  input[type="checkbox"] + label::before {
+    margin-top: 2px;
+  }
+
+  .btn button {
+    width: 330px;
+  }
+
+  .content3 {
+    margin-top: 190px;
+  }
+
+  .content3 p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    margin-top: 20px;
+  }
+
+  h4 {
+    margin-right: 200px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .loginfo {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .log input {
+    width: 133px;
+    height: 50px;
+  }
+
+  .content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info input {
+    width: 285px;
+    height: 50px;
+  }
+
+  .check li {
+    font-size: 0.8rem;
+  }
+
+  input[type="checkbox"] + label::before {
+    margin-top: 2px;
+  }
+
+  .btn button {
+    width: 285px;
+  }
+
+  .content3 {
+    margin-top: 190px;
+  }
+
+  .content3 p {
+    font-size: 0.8rem;
+  }
+}

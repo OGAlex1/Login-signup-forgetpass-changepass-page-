@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hearder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 85px;
+  border-bottom: 1px rgba(255, 255, 255, 0.142) solid;
+
+  background-color: #0f172af5;
+}
+
+.hearder h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+
+  color: #fff;
+}
+
+.hearder img {
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: 20px;
+
+  filter: brightness(1) invert(1);
+}
+
+.image1 img {
+  width: 380px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px;
+
+  font-weight: bold;
+}
+
+.newpass1 input {
+  width: 350px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1rem;
+
+  padding-left: 20px;
+  margin-top: 5px;
+  outline: none;
+  border: 2px solid #0f172a;
+  background-color: none;
+
+  transition: transform 0.3s ease;
+}
+
+.newpass1 input:hover {
+  transform: scale(1.1);
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+.btn button {
+  color: #38bdf8;
+
+  width: 150px;
+  height: 43px;
+  margin-top: 10px;
+
+  border-radius: 30px;
+  background-color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: #38bdf8 0 0 15;
+  border: 1px solid #fff;
+  transition: 0.3s ease;
+}
+
+.btn button:hover {
+  box-shadow: 0 0 15px #0c1325;
+  transform: scale(1.1);
+}
+
+.btn button:active {
+  background-color: #1e2e55;
+}
+
+button a {
+  text-decoration: none;
+  color: #38f8bb;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* 
+reponsive for small screen size for new password */
+@media (max-width: 500px) {
+  .hearder {
+    height: 55px;
+  }
+
+  .hearder h2 {
+    font-size: 1.1rem;
+  }
+
+  .hearder img {
+    width: 30px;
+  }
+
+  .image1 img {
+    width: 250px;
+    margin-top: 35px;
+  }
+
+  .newpass1 input {
+    width: 310px;
+    height: 50px;
+  }
+
+  .btn button {
+    width: 310px;
+    height: 50px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hearder {
+    height: 50px;
+  }
+
+  .hearder h2 {
+    font-size: 1rem;
+  }
+
+  .hearder img {
+    width: 27px;
+  }
+
+  .image1 img {
+    width: 230px;
+    margin-top: 35px;
+  }
+
+  .newpass1 input {
+    width: 290px;
+    height: 50px;
+  }
+
+  .btn button {
+    width: 290px;
+    height: 50px;
+    margin-top: 20px;
+  }
+}

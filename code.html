@@ -1,0 +1,33 @@
+label { display: inline-block; height: 125px; width: 125px; border: 2px solid
+rgba(255, 255, 255, 0.2); border-left-color: #38f8bb; border-radius: 50%;
+animation: rotate 1.2s linear infinite; } @keyframes rotate { 50% {
+border-left-color: #38bdf8; } 75% { border-left-color: #e67e22; } 100% {
+transform: rotate(360deg); } } .check-icon { opacity: 1; animation: check 0.6s
+ease forwards; animation-delay: 10s; } label .check-icon::after { position:
+absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scaleX(-1)
+rotate(135deg); transform-origin: right; content: ""; height: 56px; width: 28px;
+border-right: 4px solid #38f8bb; border-top: 4px solid #38f8bb; } @keyframes
+check { 0% { transform: rotate(45deg) scale(0); opacity: 0; } 60% { transform:
+rotate(45deg) scale(1.2); opacity: 1; } 100% { transform: rotate(45deg)
+scale(1); opacity: 1; } } new reset-past
+
+<label for="">
+  <div class="circle"></div>
+  <div class="check-icon"></div>
+</label>
+
+.circle { display: flex; justify-content: center; align-items: center; position:
+relative; width: 145px; height: 145px; /* border: #f85e38 2px solid; */ /*
+border: 2px solid #38bdf8; */ border: 2px solid rgba(255, 255, 255, 0.2);
+border-radius: 50%; border-top: 4px #4bf838 solid; animation: spin 5s linear
+forwards; animation-duration: 0.9s; animation-iteration-count: 6; } @keyframes
+spin { 50% { border-top-color: #38bdf8; } 75% { border-top-color: #e67e22; }
+100% { transform: rotate(360deg); border-color: #4bf838; } } .check-icon {
+width: 40px; height: 80px; border-right: #4bf838 4px solid; border-bottom:
+#4bf838 4px solid; position: absolute; top: 50%; left: 50%; transform:
+translate(50%, 50%); transform: rotate(45deg) scale(1); transform-origin:
+center; animation: check 0.6s ease forwards; animation-delay: 5s; opacity: 0; }
+@keyframes check { 0% { transform: translate(-50%, -70%) rotate(45deg) scale(0);
+opacity: 0; } 60% { transform: translate(-50%, -70%) rotate(45deg) scale(1.2);
+opacity: 1; } 100% { transform: translate(-50%, -70%) rotate(45deg) scale(1);
+opacity: 1; } }
