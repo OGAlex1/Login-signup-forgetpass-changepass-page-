@@ -89,7 +89,7 @@ h4 {
 
 .check ul {
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 
 .check li {
@@ -101,20 +101,20 @@ h4 {
   text-decoration: none;
   color: #38bdf8;
 }
-
+/* 
 input[type="checkbox"] {
   position: relative;
   display: none;
-}
+} */
 
-.mark {
+/* .mark {
   position: absolute;
   width: 10px;
   display: none;
   pointer-events: none;
-}
+} */
 
-input[type="checkbox"] + label::before {
+/* input[type="checkbox"] + label::before {
   content: "";
   display: inline-block;
 
@@ -134,7 +134,7 @@ input[type="checkbox"]:checked + :before {
 
 ul:has(input:checked) .mark {
   display: block;
-}
+} */
 
 /* button login section */
 
@@ -215,9 +215,9 @@ button:hover {
     font-size: 0.8rem;
   }
 
-  input[type="checkbox"] + label::before {
+  /* input[type="checkbox"] + label::before {
     margin-top: 2px;
-  }
+  } */
 
   .btn button {
     width: 340px;
@@ -271,9 +271,9 @@ button:hover {
     font-size: 0.8rem;
   }
 
-  input[type="checkbox"] + label::before {
+  /* input[type="checkbox"] + label::before {
     margin-top: 2px;
-  }
+  } */
 
   .btn button {
     width: 330px;
@@ -327,9 +327,9 @@ button:hover {
     font-size: 0.8rem;
   }
 
-  input[type="checkbox"] + label::before {
+  /* input[type="checkbox"] + label::before {
     margin-top: 2px;
-  }
+  } */
 
   .btn button {
     width: 285px;
