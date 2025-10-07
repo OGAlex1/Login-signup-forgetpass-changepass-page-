@@ -115,7 +115,7 @@ body {
   color: #38bdf8;
 }
 
-.staylogin input[type="checkbox"] {
+/* .staylogin input[type="checkbox"] {
   position: relative;
   display: none;
 }
@@ -141,11 +141,12 @@ input[type="checkbox"] + label::before {
 
 } */
 
-input[type="checkbox"]:checked + label:before {
+/* input[type="checkbox"]:checked + label:before {
   background-color: #38bdf8;
   border: 1px solid #ffff;
   color: #ffff;
-}
+} */
+*/
 
 /* 
 .staylogin:has(#checkbox:checked).checked {
@@ -356,7 +357,7 @@ input[type="checkbox"]:checked + label:before {
   }
 
   .log input {
-    width: 380px;
+    width: 330px;
     height: 55px;
     border-radius: 30px;
     font-size: 1.1rem;
@@ -395,10 +396,10 @@ input[type="checkbox"]:checked + label:before {
   }
 
   .btn button {
-    width: 380px;
+    width: 350px;
     height: 55px;
     font-size: 1.4rem;
-    border-radius: 20px;
+    border-radius: 30px;
   }
 
   .btn button:hover {
